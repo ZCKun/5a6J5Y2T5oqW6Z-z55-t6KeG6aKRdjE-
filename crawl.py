@@ -83,8 +83,9 @@ def params_process(p1):
     # encrypt = get_name(st, f"{st}wifi1128awemewandoujia6Xiaomi69143529399androidMIaMAXa344088263783316zh16600ffa82bd3b11065942891080*2029no_retryefc84c17a{int(p1['ts'])}016628686950355594321661.6.60.13333333333333333")
     ps = [p1['_rticket'], 'wifi','1128','aweme','wandoujia','6','unknown','69143529399','android','unknown','440','88263783316','zh','166','0','0','ffa82bd3b1106594','28','9','1080*2029','no_retry','efc84c17','a',ts,'0','1662','166','1.6.6','0.13333333333333333']
     encrypt = get_name(int(ts), ''.join(ps))
-    _as = encrypt[:len(encrypt)//2]
-    _cp = encrypt[len(encrypt)//2:]
+    i = len(encrypt)//2
+    _as = encrypt[:i]
+    _cp = encrypt[i:]
     p1.update({'as': _as, 'cp': _cp})
     print(encrypt)
     print(p1)
